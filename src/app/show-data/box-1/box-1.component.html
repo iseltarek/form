@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="right box">
+    <div class="content">
+      @if(Data){
+      <div class="image">
+        <img src="/person.png" alt="" />
+      </div>
+      <div class="data">
+        <p>اسم الطالب: {{ Data[0].name }}</p>
+        <p>كود الطالب: {{ Data[0].id }}</p>
+        <p>تاريخ الميلاد: {{ Data[0].birthday | date : "mediumDate" }}</p>
+        <p>السن: {{ Data[0].age }}</p>
+      </div>
+      }
+    </div>
+  </div>
+  <div class="left box">
+    @if(Data){
+    <div class="data">
+      <p>العنوان: {{ Data[0].address }}</p>
+      <p>حاله الطالب: {{ Data[0].status }}</p>
+      <p>رقم هاتف ولي الامر: {{ Data[0].phone }}</p>
+      <p>تاريخ: {{ Data[0].school | date : "mediumDate" }}</p>
+    </div>
+    }
+  </div>
+</div>

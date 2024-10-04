@@ -1,0 +1,24 @@
+.title-head {
+  font-size: 1.5rem;
+  color: #111c43;
+  font-weight: 50;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-weight: 50;
+}
+
+.icon-border {
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 2px solid #4450a8;
+  padding: 5px;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
+  fill: #4450a8;
+}

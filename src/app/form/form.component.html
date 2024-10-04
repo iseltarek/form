@@ -1,0 +1,136 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form, $event)">
+  <div class="form-container">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">الاسم *</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          ngModel
+          #name="ngModel"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="school-enrollment-date">موعد الالتحاق بالمدرسه * </label>
+        <input
+          type="text"
+          id="school-enrollment-date"
+          name="school"
+          ngModel
+          #school="ngModel"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="office">المكتب التابع له *</label>
+        <input
+          type="text"
+          id="office"
+          name="office"
+          ngModel
+          #office="ngModel"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="address">العنوان *</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          ngModel
+          #address="ngModel"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="birthdate"> تاريخ الميلاد *</label>
+        <input
+          type="number"
+          placeholder="يوم"
+          id="birthdate"
+          name="day"
+          ngModel
+          #birthdate="ngModel"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="number"
+          class="fix"
+          placeholder="شهر"
+          name="months"
+          ngModel
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="number"
+          class="fix"
+          placeholder="سنه"
+          name="year"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="password"> كلمه السر * </label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          ngModel
+          #passowrd="ngModel"
+          minlength="8"
+          pattern="^(?=.*[a-z])(?=.*[A-Z]).+$"
+          required
+        />
+        @if(passowrd.touched&&passowrd.invalid){
+        <p class="error">كلمة المرور يجب ان تكون مكونة من 8 احرف</p>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">تأكيد كلمة السر *</label>
+        <input
+          type="password"
+          id="confirm-password"
+          name="confirm-password"
+          ngModel
+          #confirmPassowrd="ngModel"
+          required
+        />
+        @if (confirmPassowrd.touched&&passowrd.value != confirmPassowrd.value )
+        {
+        <p class="error">كلمة المرور ليست متطابقة</p>
+        }
+      </div>
+    </div>
+  </div>
+
+  @if(form.form.touched&&form.form.dirty&& form.form.invalid){
+  <p class="error error-1">اكمل بيناتك</p>
+  }
+  <div class="btn-container">
+    <button (click)="changePage(form)" type="submit" class="button">
+      الدخول
+    </button>
+  </div>
+</form>

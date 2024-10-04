@@ -1,0 +1,22 @@
+.grid-container {
+  margin: 1.4rem;
+  padding: 3rem;
+  background-color: #f6f6f6;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+header {
+  width: 25%;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-left: 1px solid #ccc;
+}
+
+main {
+  flex: 1;
+  height: 100%;
+  margin-bottom: 2rem;
+}

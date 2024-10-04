@@ -1,0 +1,45 @@
+.container {
+  margin: 1.3rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #111c43;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  height: inherit;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 0.8rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+.check {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+a {
+  text-decoration: underline;
+  color: #111c43;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+label {
+  margin: 2rem;
+}
+input {
+  margin: 1rem;
+}
