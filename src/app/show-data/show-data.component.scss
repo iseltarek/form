@@ -2,25 +2,23 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: 100%;
 
   background-color: #d9d9d9;
 }
 
 .component-1 {
-  flex: 30%;
+  height: 15rem;
+
   margin: 1rem 2rem 0 2rem;
 }
 .component-2 {
-  height: 20%;
   margin: 0 2rem;
 }
 
 .component-3 {
-  height: 10%;
   margin: 0 2rem;
 }
 .component-4 {
-  height: 30%;
+  height: 18rem;
   margin: 0 2rem 2rem 2rem;
 }
