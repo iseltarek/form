@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 // File path for the JSON file
 const filePath = "./data/user-places.json";
 
-app.post("/user-places", async (req, res) => {
+app.put("/user-places", async (req, res) => {
   const newUserData = req.body;
 
   try {

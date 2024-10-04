@@ -15,6 +15,6 @@ export class DataService {
     return this.http.get(this.url);
   }
   addUserData(userData: data): Observable<any> {
-    return this.http.post(this.url, userData); // Change to POST if needed
+    return this.http.put(this.url, userData); // Change to POST if needed
   }
 }

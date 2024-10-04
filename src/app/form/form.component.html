@@ -1,4 +1,4 @@
-<form #form="ngForm" (ngSubmit)="onSubmit(form, $event)">
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
   <div class="form-container">
     <div class="form-row">
       <div class="form-group">
@@ -97,12 +97,12 @@
           id="password"
           name="password"
           ngModel
-          #passowrd="ngModel"
+          #password="ngModel"
           minlength="8"
           pattern="^(?=.*[a-z])(?=.*[A-Z]).+$"
           required
         />
-        @if(passowrd.touched&&passowrd.invalid){
+        @if(password.touched&&password.invalid){
         <p class="error">كلمة المرور يجب ان تكون مكونة من 8 احرف</p>
         }
       </div>
@@ -114,10 +114,10 @@
           id="confirm-password"
           name="confirm-password"
           ngModel
-          #confirmPassowrd="ngModel"
+          #confirmPassword="ngModel"
           required
         />
-        @if (confirmPassowrd.touched&&passowrd.value != confirmPassowrd.value )
+        @if (confirmPassword.touched&&password.value != confirmPassword.value )
         {
         <p class="error">كلمة المرور ليست متطابقة</p>
         }
@@ -125,12 +125,11 @@
     </div>
   </div>
 
+  <div class="btn-container">
+    <button type="submit" class="button">الدخول</button>
+  </div>
+
   @if(form.form.touched&&form.form.dirty&& form.form.invalid){
   <p class="error error-1">اكمل بيناتك</p>
   }
-  <div class="btn-container">
-    <button (click)="changePage(form)" type="submit" class="button">
-      الدخول
-    </button>
-  </div>
 </form>
